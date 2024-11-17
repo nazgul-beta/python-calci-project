@@ -7,7 +7,7 @@ This Python script is a simple calculator that allows for basic arithmetic opera
 1. Run the script:
 
     ```bash
-    python calculator.py
+    python main.py
     ```
 
 2. Follow the prompts to choose an operation and input the required numbers.
