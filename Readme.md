@@ -29,4 +29,5 @@ To exit the calculator, enter `-1` when prompted for your choice.
 ## Note
 
 This calculator clears the console after each operation for a better user experience.
+While showing the result it waits for 5 seconds before switching to next prompt
 
