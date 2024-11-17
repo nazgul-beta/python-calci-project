@@ -40,7 +40,7 @@ def division():
     n1 = float(input("Enter first number: "))
     n2 = float(input("Enter second number: "))
     if n2 == 0:
-        print("Invalid entry")
+        print("Invalid entry, denominator is 0")
         return "Invalid entry"
     print(n1 / n2)
 
