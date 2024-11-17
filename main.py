@@ -168,7 +168,7 @@ while c != "-1":
     elif c == "6":
         num = int(input("enter the number: "))
         if num < 0:
-            print("Invalid entry")
+            print("Invalid entry, number is less than 0")
             continue
         res = factorial(num)
     elif c == "7":
