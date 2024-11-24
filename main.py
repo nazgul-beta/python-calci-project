@@ -31,6 +31,8 @@ def multiplication():
     nums = list(map(int, input("Enter all numbers separated by space: ").split()))
     result = 1
     for num in nums:
+        if num == 0:
+            return 0
         result *= num
     return result
 
@@ -46,6 +48,16 @@ def division():
 
     return n1 / n2
 
+def modulo():
+    """Function return the mod of two numbers"""
+    n1 = float(input("Enter first number: "))
+    n2 = float(input("Enter second number: "))
+    if n2 == 0:
+        print("Invalid entry, denominator is 0")
+        return "Invalid entry"
+    print(n1 % n2)
+
+    return n1 % n2
 
 def average():
     """This function takes space separated number series and then convert it to a list.
@@ -146,10 +158,11 @@ while c != "-1":
     print("Enter '2' for subtraction")
     print("Enter '3' for multiplication")
     print("Enter '4' for division")
-    print("Enter '5' for average")
-    print("Enter '6' for factorial")
-    print("Enter '7' for complex arithmetic")
-    print("ENter '8'  for binomial")
+    print("Enter '5' for modulo")
+    print("Enter '6' for average")
+    print("Enter '7' for factorial")
+    print("Enter '8' for complex arithmetic")
+    print("ENter '9'  for binomial")
     print("Enter '-1' to exit.\n")
 
     c = input("Your choice is: ")
@@ -164,17 +177,21 @@ while c != "-1":
         if res == "Invalid entry":
             continue
     elif c == "5":
-        res = average()
+        res = modulo()
+        if res == "Invalid entry":
+            continue
     elif c == "6":
+        res = average()
+    elif c == "7":
         num = int(input("enter the number: "))
         if num < 0:
             print("Invalid entry, number is less than 0")
             continue
         res = factorial(num)
-    elif c == "7":
+    elif c == "8":
         os.system("cls||clear")
         res = complex_arithmetic()
-    elif c == "8":
+    elif c == "9":
         num = list(map(int, input("Enter the number separated by space").split()))
         if num[0] < num[1]:
             print("Invalid entry")
