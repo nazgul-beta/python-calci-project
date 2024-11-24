@@ -75,6 +75,8 @@ def factorial(num):
     and returns the result.
     """
     answer = 1
+    if num==0 or num==1:
+        return 1
     for i in range(num):
         answer *= i + 1
     return answer
