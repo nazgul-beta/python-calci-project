@@ -1,4 +1,4 @@
-name: OpenAI Code Reviewer
+name: AI Code Reviewer
 
 on:
   issue_comment:
@@ -7,7 +7,7 @@ on:
 permissions: write-all
 
 jobs:
-  gemini-code-review:
+  ai-code-review:
     runs-on: ubuntu-latest
     if: |
       github.event.issue.pull_request &&
@@ -37,5 +37,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: gpt-4o-mini # Optional, default is `gemini-1.5-flash-002`
+          OPENAI_MODEL: gpt-4o-mini # Optional, default is `openai gpt-4o-mini`
           INPUT_EXCLUDE: "*.md,*.txt,package-lock.json,*.yml,*.yaml"
